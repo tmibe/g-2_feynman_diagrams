@@ -1,0 +1,257 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %フォントカラー
+\usepackage{amssymb} %数式記号
+\usepackage{amsmath} %数式
+\usepackage[utf8]{inputenc} %発音区別符アルファベットの直接入力
+\usepackage{feynmp}
+
+\usepackage[reset,papersize={2000truemm,100truemm},vmargin=2truecm,hmargin=3truecm]{geometry}
+\AtBeginDvi{\special{pdf: pagesize width 2000truemm height 100truemm}}\begin{document}
+\hspace{12pt}
+\begin{fmffile}{feyngraph-QED1}
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1,v2,v3,o2}
+       \fmf{photon,label=$\gamma$}{i,v2}
+       \fmffreeze
+       \fmf{photon,right=0.8,tension=0.1,label=$\gamma$}{v1,v3} 
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+\begin{fmffile}{feyngraph-QED2-1}
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1,v2,v3,v4,v5,o2}
+       \fmf{photon,label=$\gamma$}{i,v3}
+       \fmffreeze
+       \fmf{photon,right=0.4,tension=0.1}{v2,v4} 
+       \fmf{photon,right=0.4,tension=0.1}{v1,v5} 
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+\begin{fmffile}{feyngraph-QED2-2}
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1,v2,v3,v4,v5,v6,v7,o2}
+       \fmf{photon,label=$\gamma$,tension=0.7}{i,v4}
+       \fmffreeze
+       \fmf{photon,right=0.4,tension=0.1}{v2,v6} 
+       \fmf{photon,left=0.8,tension=0.01}{v5,v7} 
+       \fmf{phantom,left=0.8,tension=0.01}{v1,v3} 
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+  \begin{fmffile}{feyngraph-QED2-3} %vacuum polarization
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1,v2,v3,o2}
+       \fmf{photon,label=$\gamma$}{i,v2}
+       \fmffreeze
+       \fmf{photon,tension=0.1}{v1,w1} 
+       \fmf{fermion,left,tension=0.03}{w1,w2}
+       \fmf{fermion,left,tension=0.03,label=$e\cdot\mu\cdot\tau$}{w2,w1}
+       \fmf{photon,tension=0.1}{w2,v3} 
+       \fmf{phantom,tension=0.02}{o1,w1}
+       \fmf{phantom,tension=0.02}{o2,w2}
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+  \begin{fmffile}{feyngraph-QED3-1} %vacuum polarization 2-loops
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1,v2,v3,o2}
+       \fmf{photon,label=$\gamma$}{i,v2}
+       \fmffreeze
+       \fmf{photon,tension=0.1}{v1,w1} 
+       \fmf{fermion,left,tension=0.03}{w1,w2,w1}
+       \fmf{photon,tension=0.02}{w2,w3} 
+       \fmf{phantom,tension=0.02}{o1,w1}
+       \fmf{phantom,tension=0.02}{o2,w2}
+       \fmf{fermion,left,tension=0.03}{w3,w4,w3}
+       \fmf{photon,tension=0.1}{w4,v3} 
+       \fmf{phantom,tension=0.02}{o1,w3}
+       \fmf{phantom,tension=0.02}{o2,w4}
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+\begin{fmffile}{feyngraph-QED3-2}
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1,v2,v3,v4,v5,v6,v7,o2}
+       \fmf{photon,label=$\gamma$,tension=0.6}{i,v4}
+       \fmffreeze
+       \fmf{photon,right=0.3,tension=0.1}{v1,v7} 
+       \fmf{photon,right=0.3,tension=0.1}{v2,v6} 
+       \fmf{photon,right=0.3,tension=0.1}{v3,v5} 
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+\begin{fmffile}{feyngraph-QED3-3} %light-by-light
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1,v2,v3,o2}
+       \fmf{photon,label=$\gamma$,tension=0.3}{i,w1}
+       \fmfblob{0.30w}{w1}
+       \fmf{photon,tension=0.1}{v1,w1} 
+       \fmf{photon,tension=0.1}{v2,w1} 
+       \fmf{photon,tension=0.1}{v3,w1} 
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+\begin{fmffile}{feyngraph-QED4-1}
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1,v2,v3,v4,v5,v6,v7,v8,v9,o2}
+       \fmf{photon,label=$\gamma$,tension=0.6}{i,v5}
+       \fmffreeze
+       \fmf{photon,right=0.3,tension=0.1}{v1,v9} 
+       \fmf{photon,right=0.3,tension=0.1}{v2,v8}
+       \fmf{photon,right=0.3,tension=0.1}{v3,v7} 
+       \fmf{photon,right=0.3,tension=0.1}{v4,v6} 
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+  \begin{fmffile}{feyngraph-QED4-2} %vacuum polarization 3-loops
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1,v2,v3,o2}
+       \fmf{photon,label=$\gamma$}{i,v2}
+       \fmffreeze
+       \fmf{photon,tension=0.15}{v1,w1} 
+       \fmf{fermion,left=1.,tension=0.05}{w1,w2,w1}
+       \fmf{photon,tension=0.02}{w2,w3} 
+       \fmf{phantom,tension=0.02}{o1,w1}
+       \fmf{phantom,tension=0.02}{o2,w2}
+       \fmf{fermion,left=1.,tension=0.05}{w3,w4,w3}
+       \fmf{photon,tension=0.1}{w4,w5} 
+       \fmf{phantom,tension=0.03}{o1,w3}
+       \fmf{phantom,tension=0.03}{o2,w4}
+       \fmf{fermion,left=1.,tension=0.05}{w5,w6,w5}
+       \fmf{photon,tension=0.15}{w6,v3} 
+       \fmf{phantom,tension=0.02}{o1,w5}
+       \fmf{phantom,tension=0.02}{o2,w6}
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+  \begin{fmffile}{feyngraph-QCD} %vacuum polarization
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1,v2,v3,o2}
+       \fmf{photon,label=$\gamma$}{i,v2}
+       \fmffreeze
+       \fmf{photon,tension=0.1}{v1,w1} 
+       \fmf{fermion,left,tension=0.03}{w1,w2}
+       \fmf{fermion,left,tension=0.03,label=hadrons}{w2,w1}
+       \fmf{photon,tension=0.1}{w2,v3} 
+       \fmf{phantom,tension=0.02}{o1,w1}
+       \fmf{phantom,tension=0.02}{o2,w2}
+       \fmfposition
+       \fmfipath{p[]}
+       \fmfiset{p1}{vpath(__w1,__w2)}
+       \fmfiset{p2}{vpath(__w2,__w1)}
+       \fmfi{gluon}{point 3/4 length p1 of p1 -- point 3/4 length p2 of p2}
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+\begin{fmffile}{feyngraph-EW1-1}
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1,v2,v3,o2}
+       \fmf{photon,label=$\gamma$}{i,v2}
+       \fmffreeze
+       \fmf{boson,right=0.8,tension=0.1,label=Z}{v1,v3} 
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+\begin{fmffile}{feyngraph-EW1-2}
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1}
+       \fmf{boson,label=$W$}{v1,v2,v3}
+       \fmf{fermion}{v3,o2}
+       \fmf{photon,label=$\gamma$}{i,v2}
+       \fmffreeze
+       \fmf{dashes,right=0.8,tension=0.1,label=$\nu_{\mu}$}{v1,v3}
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+\begin{fmffile}{feyngraph-BSM-Darkphoton}
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1,v2,v3,o2}
+       \fmf{photon,label=$\gamma$}{i,v2}
+       \fmffreeze
+       \fmf{dbl_wiggly,right=0.8,tension=0.1,fore=red,label=\color{red}\textbf{dark photon}}{v1,v3}
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+\begin{fmffile}{feyngraph-BSM-SUSY}
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1}
+       \fmf{dbl_dots,fore=red}{v1,v2,v3}
+       \fmf{fermion}{v3,o2}
+       \fmf{photon,label=$\gamma$}{i,v2}
+       \fmffreeze
+       \fmf{dbl_plain,right=0.8,tension=0.1,fore=red,label=\color{red}\textbf{SUSY particle}}{v1,v3}
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+\begin{fmffile}{feyngraph-BSM-LQ}
+      \begin{fmfgraph*}(150,150)
+       \fmftop{i}
+       \fmfbottom{o1,o2}
+       \fmflabel{$\mu$}{o1}
+       \fmflabel{$\mu$}{o2}
+       \fmf{fermion}{o1,v1}
+       \fmf{plain,label=$q$}{v1,v2,v3}
+       \fmf{fermion}{v3,o2}
+       \fmf{photon,label=$\gamma$}{i,v2}
+       \fmffreeze
+       \fmf{dbl_dashes,right=0.8,tension=0.1,fore=red,label=\color{red}\textbf{lepto-quark}}{v1,v3}
+    \end{fmfgraph*}
+  \end{fmffile}
+\hspace{12pt}
+\end{document}
